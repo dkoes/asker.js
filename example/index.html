@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>asker.js - example page</title>
+	<link rel="stylesheet" href="../themes/asker.default.css" />
+	<meta name="viewport" content="width=device-width">
+
+</head>
+<body>
+
+<div id="question" style="border: 1px solid black; width: 400px"></div>
+	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
+	<script src="../lib/asker.js"></script>
+	<script>
+	
+	//the callback is provided a canvas object and data 
+	var chartmaker = function(canvas, labels, data) {
+		var ctx = $(canvas).get(0).getContext("2d");
+		var dataset = {labels: labels, datasets:[{
+		    data: data,
+		    fillColor: "rgba(150,64,150,0.5)",
+	        strokeColor: "rgba(150,64,150,0.8)",    
+		}]};
+		var myBarChart = new Chart(ctx).Bar(dataset);
+
+	};
+	
+	$('#question').asker({
+	    id: "test",
+	    question: "What do you think?",
+		answers: ["Not much","Pi", "Foosball"],
+		extra: ["Really. My mind is a total blank", "3.14159 Go Pi!", "A sport for champions"],
+		server: "asker.cgi",
+		charter: chartmaker})
+	</script>
+	
+
+</body>

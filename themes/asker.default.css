@@ -1,0 +1,52 @@
+.asker-container {
+	/*defaults */
+	font-family: sans-serif;
+    background: #FFF;
+    background: rgba( 255, 255, 255, .95 );
+    color: #02070B;
+    padding: 0.5em;
+
+}
+
+.asker-question {
+	padding-bottom: 0.5em;
+	font-size: 110%;
+}
+
+.asker-answers {
+	   padding-bottom: 1em;'
+}
+
+.asker-radio {
+	width: 1em;
+}
+.asker-answer {
+	padding-top: 0.25em;
+}
+.asker-extra {
+	padding-left: 1.5em;
+	font-style: italic;
+	color: #555;
+	font-size: 90%;
+}
+
+.asker-msg {
+	text-align: center;
+	height: 1.5em;
+}
+
+.asker-submit {
+	float: right;
+}
+.asker-resultscnt {
+	float: left;
+}
+
+.asker-canvas {
+	width: 100%;
+	height: 100%;
+}
+
+.asker-viewbutton {
+	border-style: none;
+}
