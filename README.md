@@ -4,7 +4,7 @@ A simple jquery plugin for asking a question and recording the answer.
 A cgi script must run on the server that interfaces with a database (see example/asker.cgi and example/asker.sql).
 
 Usage:
-```
+```javascript
 	$('#question').asker({
 	    id: "test",
 	    question: "What do you think?",
