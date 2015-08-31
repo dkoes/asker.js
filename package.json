@@ -1,0 +1,27 @@
+{
+  "name": "asker.js",
+  "description": "A simple jquery plugin for asking a question and recording the answer.",
+  "version": "0.0.1",
+  "homepage": "https://github.com/dkoes/asker.js",
+  "author": {
+    "name": "David Koes",
+    "email": "david.r.koes@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/dkoes/asker.js.git"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-uglify": "^1.4.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-jshint": "^1.11.2"
+  },
+  "licenses": [
+    {
+      "type": "BSD-2-Clause",
+      "url": "http://opensource.org/licenses/BSD-2-Clause"
+    }
+  ]
+}
