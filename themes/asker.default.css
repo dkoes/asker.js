@@ -1,4 +1,4 @@
-.asker-container {
+div.asker-container {
 	/*defaults */
 	font-family: sans-serif;
     background: #FFF;
@@ -8,45 +8,46 @@
 
 }
 
-.asker-question {
+div.asker-container .asker-question {
 	padding-bottom: 0.5em;
 	font-size: 110%;
 }
 
-.asker-answers {
+div.asker-container .asker-answers {
 	   padding-bottom: 1em;'
 }
 
-.asker-radio {
+div.asker-container  .asker-radio {
 	width: 1em;
 }
-.asker-answer {
+
+div.asker-container .asker-answer {
 	padding-top: 0.25em;
 }
-.asker-extra {
+div.asker-container .asker-extra {
 	padding-left: 1.5em;
 	font-style: italic;
 	color: #555;
 	font-size: 90%;
 }
 
-.asker-msg {
+div.asker-container .asker-msg {
 	text-align: center;
 	height: 1.5em;
 }
 
-.asker-submit {
+div.asker-container .asker-submit {
 	float: right;
 }
-.asker-resultscnt {
+div.asker-container .asker-resultscnt {
 	float: left;
 }
 
-.asker-canvas {
+div.asker-container .asker-canvas {
 	width: 100%;
 	height: 100%;
 }
 
-.asker-viewbutton {
+div.asker-container .asker-viewbutton {
 	border-style: none;
 }

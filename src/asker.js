@@ -88,7 +88,7 @@
         //create question/answer
         container = $('<div>').appendTo(this).addClass('asker-container');
         container.css('position','relative');
-        var q = $('<div>').addClass('asker-question').text(options.question);
+        var q = $('<div>').addClass('asker-question').html(options.question);
         q.appendTo(container);
         var answers = $('<form>').appendTo(container).addClass('asker-answers');
         
@@ -100,9 +100,9 @@
             var ansbox = $('<div>').appendTo(answers).addClass('asker-answer');
             var a = $('<input type="radio" name="answer" value="'+ i + '">').appendTo(ansbox).addClass('asker-radio');
             a.click(enableSubmit);
-            $('<span>').appendTo(ansbox).text(options.answers[i]).addClass('asker-answer-text');
+            $('<span>').appendTo(ansbox).html(options.answers[i]).addClass('asker-answer-text');
             if(options.extra[i]) {
-                $('<div>').appendTo(ansbox).addClass('asker-extra').text(options.extra[i]);
+                $('<div>').appendTo(ansbox).addClass('asker-extra').html(options.extra[i]);
             }
         }
         
