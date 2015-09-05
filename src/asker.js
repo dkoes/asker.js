@@ -14,7 +14,7 @@
         var timer = null;
         
         // This is the easiest way to have default options.
-        var settings = $.extend({
+        options = $.extend({
             // These are the defaults.
             id: "", //must be unique
             question: "What is the answer?",
