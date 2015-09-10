@@ -114,7 +114,7 @@
         resultscnt = $('<div>').appendTo(container).addClass('asker-resultscnt').text('0 Answers');
         getResultsCnt(resultscnt);
         resultscnt.click(function(e) {
-            if (e.shiftKey) {        //shift click should show results
+            if (e.shiftKey || e.metaKey) {        //shift click should show results
                 getAndShowResults();
             }
         });
