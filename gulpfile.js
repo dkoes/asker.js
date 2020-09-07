@@ -6,14 +6,14 @@ var gulp = require('gulp'),
 
 // Lint JS
 gulp.task('lint', function() {
-  gulp.src('./src/*.js')
+  return gulp.src('./src/*.js')
     .pipe(jshint({'latedef':'nofunc'}))
     .pipe(jshint.reporter('default'));
 });
 
 // Concat & Minify JS
 gulp.task('minify', function(){
-    gulp.src('./src/*.js')
+    return gulp.src('./src/*.js')
         .pipe(concat('asker.js'))
         .pipe(gulp.dest('lib'))
         .pipe(rename('asker.min.js'))
@@ -22,7 +22,7 @@ gulp.task('minify', function(){
 });
 
 // Default
-gulp.task('default', ['lint','minify'] );
+gulp.task('default', gulp.parallel('lint','minify' ));
 
 
 

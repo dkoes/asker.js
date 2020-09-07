@@ -34,14 +34,18 @@
         
         //poll server for number of responses
         var getResultsCnt = function() {
-            $.get(options.server, {id: options.id})
-                .done(function(ret) {
-                  updateCnt(ret);
-                  timer = setTimeout(getResultsCnt, 1000); //poll
-                })
-                .fail(function() {
-                    resultscnt.text("X Answers");
-                });
+            if($(container).is(":visible")) {
+                $.get(options.server, {id: options.id})
+                    .done(function(ret) {
+                      updateCnt(ret);
+                      timer = setTimeout(getResultsCnt, 1000); //poll
+                    })
+                    .fail(function() {
+                        resultscnt.text("X Answers");
+                    });
+            } else {
+                timer = setTimeout(getResultsCnt, 1000); //check visibility in 1 sec
+            }
         };
         
         var getAndShowResults = function() {
