@@ -5,6 +5,25 @@
  */
 
 (function( $ ) {
+    
+    var visibleInViewport = function(o)  {
+        if($(o).is(":visible")) {
+            var rec = $(o)[0].getBoundingClientRect();
+            var top = rec.top, bottom = rec.bottom, left = rec.left, right = rec.right;
+            var viewportHeight = $(window).height();
+            var viewportWidth = $(window).width();
+            if(right <= 0 || left > viewportWidth) {
+                return false;
+            }
+            if(bottom < 0 || top > $viewportHeight) {
+                return false;
+            }
+            return true;
+        } else {
+            return false;
+        }
+    };
+    
     $.fn.asker = function(options) {
         
         var submit = null;
@@ -34,7 +53,7 @@
         
         //poll server for number of responses
         var getResultsCnt = function() {
-            if($(container).is(":visible")) {
+            if(visibleInViewport(container)) {
                 $.get(options.server, {id: options.id})
                     .done(function(ret) {
                       updateCnt(ret);
