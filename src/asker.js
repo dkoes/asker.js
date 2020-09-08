@@ -15,7 +15,7 @@
             if(right <= 0 || left > viewportWidth) {
                 return false;
             }
-            if(bottom < 0 || top > $viewportHeight) {
+            if(bottom < 0 || top > viewportHeight) {
                 return false;
             }
             return true;
